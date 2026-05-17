@@ -38,7 +38,7 @@ Change:
 
 ```json
 {
-  "apiBase": "https://hospital-emr-backend.onrender.com/api"
+  "apiBase": "https://homabay-emr-system.onrender.com/api"
 }
 
 ```
