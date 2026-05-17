@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referral Hospital EMR System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Referral Hospital EMR home">
+      <span class="brand-mark">RH</span>
+      <span>
+        <strong>Referral Hospital</strong>
+        <small>Electronic Medical Records</small>
+      </span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary modules">
+      <a href="pages/registration.html">Registration</a>
+      <a href="pages/doctor.html">Doctor</a>
+      <a href="pages/nurse.html">Nurse</a>
+      <a href="pages/laboratory.html">Lab</a>
+      <a href="pages/chronic.html">Chronic Centre</a>
+      <a href="pages/ict.html">ICT</a>
+      <a href="pages/billing.html">Billing</a>
+      <a href="pages/admin.html">Admin</a>
+      <a href="pages/login.html">Sign In</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Hospital workflow command center</p>
+        <h1>One clear front desk for every patient journey.</h1>
+        <p class="hero-copy">
+          Register patients, capture clinical services, coordinate departments, review profiles,
+          and prepare billing from a single clean EMR workspace.
+        </p>
+
+        <div class="hero-actions" aria-label="Quick actions">
+          <a class="btn btn-primary" href="pages/registration.html">Start Registration</a>
+          <a class="btn btn-secondary" href="pages/departments.html">Open Departments</a>
+        </div>
+
+        <div class="hero-metrics" aria-label="System summary">
+          <div>
+            <strong>21</strong>
+            <span>Work areas</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Front desk ready</span>
+          </div>
+          <div>
+            <strong>KES</strong>
+            <span>Billing support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel home-hero-panel" aria-label="EMR workflow preview">
+        <div class="hero-photo">
+          <img src="images/doctor.svg" alt="Doctor care workspace">
+          <img src="images/laboratory.svg" alt="Laboratory diagnostics">
+          <img src="images/pharmacy.svg" alt="Pharmacy services">
+        </div>
+        <div class="hospital-badge">
+          <span>Patient safety</span>
+          <span>Real-time tracking</span>
+          <span>Integrated billing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="care-gallery" aria-label="Hospital care areas">
+      <article>
+        <img src="images/registration.svg" alt="Patient registration">
+        <strong>Front office intake</strong>
+        <span>Clean patient details before care begins.</span>
+      </article>
+      <article>
+        <img src="images/icu.svg" alt="ICU monitoring">
+        <strong>Clinical coordination</strong>
+        <span>Departments record services into one patient history.</span>
+      </article>
+      <article>
+        <img src="images/billing.svg" alt="Billing receipt">
+        <strong>Billing ready</strong>
+        <span>Charges follow the patient from service to receipt.</span>
+      </article>
+    </section>
+
+    <section class="module-section" aria-labelledby="modules-title">
+      <div class="section-heading">
+        <p class="eyebrow">Open a department</p>
+        <h2 id="modules-title">Choose where to work next</h2>
+      </div>
+
+      <div class="module-grid" id="departmentGrid" aria-label="Departments"></div>
+    </section>
+
+    <section class="operations-band" aria-label="Operational strengths">
+      <div>
+        <h2>Built for fast hospital handoffs</h2>
+        <p>
+          The home screen keeps each unit one click away, so staff can move from front office
+          registration to clinical review, diagnostics, billing, and administration without hunting.
+        </p>
+      </div>
+      <a class="btn btn-light" href="pages/billing.html">Go to Billing</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Referral Hospital EMR</h3>
+        <p>Streamlining healthcare management with comprehensive electronic medical records for better patient care.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="pages/registration.html">Patient Registration</a></li>
+          <li><a href="pages/doctor.html">Doctor Dashboard</a></li>
+          <li><a href="pages/billing.html">Billing System</a></li>
+          <li><a href="pages/admin.html">Administration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="pages/login.html">Staff Sign In</a></li>
+          <li><a href="pages/departments.html">Department Directory</a></li>
+          <li><a href="pages/patientprofile.html">Patient Profile</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Referral Hospital EMR System. Designed for coordinated healthcare management.</p>
+  </footer>
+</body>
+</html>

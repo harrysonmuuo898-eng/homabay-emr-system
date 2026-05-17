@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/ict.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-ict" data-roles="admin,technician">
+  <header><h2>ICT Department</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Systems and network support</p>
+        <h1>Keep the EMR, computers, and hospital network running</h1>
+        <p>Record system faults, network issues, hardware problems, printer downtime, user support, priority, action taken, and resolution status.</p>
+      </div>
+      <img src="../images/ict.svg" alt="ICT Department" class="hero-image">
+    </section>
+
+    <div class="quick-stats">
+      <div class="stat-card"><div class="number">LAN</div><div class="label">Network Checks</div></div>
+      <div class="stat-card"><div class="number">EMR</div><div class="label">System Support</div></div>
+      <div class="stat-card"><div class="number">HW</div><div class="label">Device Support</div></div>
+      <div class="stat-card"><div class="number">24/7</div><div class="label">Incident Response</div></div>
+    </div>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="ICT">
+          <label>Patient ID / Staff ID
+            <input name="patientID" placeholder="Use patient ID if issue affects patient care" required>
+          </label>
+          <label>Support Cost
+            <input name="cost" type="number" min="1" value="1" required>
+          </label>
+          <label>Issue Type
+            <select name="description" required>
+              <option>EMR System Issue</option>
+              <option>Network Down</option>
+              <option>Slow Internet</option>
+              <option>Computer / Tablet Issue</option>
+              <option>Printer / Scanner Issue</option>
+              <option>User Account Support</option>
+              <option>Data / Report Support</option>
+            </select>
+          </label>
+          <label>Department Affected<input name="departmentAffected" placeholder="Laboratory, Wards, Pharmacy"></label>
+          <label>Device / Location<input name="deviceLocation" placeholder="Nurse station PC, Lab printer"></label>
+          <label>Priority
+            <select name="priority">
+              <option>Routine</option>
+              <option>Urgent</option>
+              <option>Critical</option>
+            </select>
+          </label>
+          <label>Status
+            <select name="status">
+              <option>Open</option>
+              <option>In progress</option>
+              <option>Resolved</option>
+              <option>Escalated</option>
+            </select>
+          </label>
+          <label>Technician<input name="technician"></label>
+          <label class="span-2">Problem Details<textarea name="problemDetails" required></textarea></label>
+          <label class="span-2">Action Taken / Resolution Notes<textarea name="resolutionNotes"></textarea></label>
+          <button type="submit">Save ICT Support Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>ICT Response Checklist</h3>
+        <div class="network-checklist">
+          <span>Confirm the affected department and device.</span>
+          <span>Check EMR access, network, printer, and user account status.</span>
+          <span>Record action taken and mark unresolved issues for follow-up.</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

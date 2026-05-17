@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Patient Profile</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/profile.css"><script src="../script.js" defer></script></head>
+<body class="dept-profile" data-roles="admin,doctor,nurse">
+<header><h2>Patient Profile</h2></header>
+<main>
+<section class="dashboard-hero"><div><p class="eyebrow">Protected clinical record</p><h1>Patient profile and care timeline</h1><p>Only authorized clinical and admin roles can view the complete patient record.</p></div></section>
+<div style="display: flex; gap: 1rem; margin: 1rem 0;">
+  <input id="pid" placeholder="Enter Patient ID">
+  <button onclick="showProfile()">View Profile</button>
+</div>
+<div id="profile"></div>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(location.search);
+  const patientId = params.get("id");
+  if (patientId) {
+    document.getElementById("pid").value = patientId;
+    setTimeout(() => showProfile(), 500);
+  }
+});
+</script>
+</body></html>

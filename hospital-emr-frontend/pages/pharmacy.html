@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pharmacy</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/pharmacy.css"><script src="../script.js" defer></script></head>
+<body class="dept-pharmacy" data-roles="admin,nurse,technician"><header><h2>Pharmacy</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Medication dispensing</p><h1>Prescription fulfilment and charges</h1><p>Record medicine, dosage, quantity, instructions, and pharmacy cost.</p></div><img src="../images/pharmacy.svg" alt="Pharmacy" class="hero-image"></section>
+
+<div class="quick-stats">
+  <div class="stat-card">
+    <div class="number">67</div>
+    <div class="label">Prescriptions Today</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">23</div>
+    <div class="label">Pending Orders</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">95%</div>
+    <div class="label">Fulfillment Rate</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">KES 78K</div>
+    <div class="label">Pharmacy Revenue</div>
+  </div>
+</div>
+
+<div class="department-dashboard">
+  <section class="form-panel">
+    <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">Medication Dispensing Form</h3>
+    <form class="form-grid" data-department-form="Pharmacy">
+<label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" required></label>
+<label>Medicine<input name="description" required></label><label>Quantity<input name="quantity" type="number" min="1"></label>
+<label>Dosage<input name="dosage"></label><label>Frequency<input name="frequency"></label>
+<label class="span-2">Instructions<textarea name="instructions"></textarea></label>
+<button type="submit">Save Pharmacy Activity</button></form>
+  </section>
+  <aside class="activity-panel" id="deptActivity">
+    <h3>Recent Dispensing</h3>
+    <div class="activity-item">
+      <div class="icon">RX</div>
+      <div class="content">
+        <h4>Paracetamol Dispensed</h4>
+        <p>Patient #OP-2048 - 500mg tablets, 30 qty</p>
+        <div class="timestamp">30 min ago</div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="icon">INJ</div>
+      <div class="content">
+        <h4>Insulin Administered</h4>
+        <p>Patient #OP-2049 - 10 units subcutaneous</p>
+        <div class="timestamp">1 hour ago</div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="icon">MED</div>
+      <div class="content">
+        <h4>Antibiotics Prescribed</h4>
+        <p>Patient #OP-2050 - Amoxicillin 250mg</p>
+        <div class="timestamp">2 hours ago</div>
+      </div>
+    </div>
+  </aside>
+</div>
+</main></body></html>

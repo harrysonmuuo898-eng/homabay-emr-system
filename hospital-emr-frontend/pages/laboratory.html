@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratory Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/laboratory.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-lab" data-roles="admin,doctor,nurse,technician">
+  <header>
+    <h2>Laboratory Department</h2>
+  </header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Diagnostics</p>
+        <h1>Laboratory orders, samples, and results</h1>
+        <p>Capture ordered test, specimen, result summary, verification, and laboratory charges.</p>
+      </div>
+      <img src="../images/laboratory.svg" alt="Laboratory Department" class="hero-image">
+    </section>
+
+    <div class="quick-stats">
+      <div class="stat-card">
+        <div class="number">34</div>
+        <div class="label">Tests Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">12</div>
+        <div class="label">Pending Results</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">98%</div>
+        <div class="label">Accuracy Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">KES 52K</div>
+        <div class="label">Lab Revenue</div>
+      </div>
+    </div>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">Laboratory Test Form</h3>
+        <form class="form-grid" data-department-form="Laboratory">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Test
+            <select name="description" required>
+              <option value="Blood Test">Blood Test</option>
+              <option value="Urine Test">Urine Test</option>
+              <option value="Stool Test">Stool Test</option>
+              <option value="Malaria Test">Malaria Test</option>
+              <option value="HIV Test">HIV Test</option>
+            </select>
+          </label>
+          <label>Cost<input name="cost" type="number" min="1" value="1500" required></label>
+          <label>Specimen<input name="specimen" placeholder="Blood, urine, stool"></label>
+          <label class="span-2">Result Summary<textarea name="result"></textarea></label>
+          <label class="span-2">Technician Notes<textarea name="notes"></textarea></label>
+          <button type="submit">Save Lab Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Lab Activities</h3>
+        <div class="activity-item">
+          <div class="icon">BT</div>
+          <div class="content">
+            <h4>Blood Test Completed</h4>
+            <p>Patient #OP-2048 - CBC Results: Normal</p>
+            <div class="timestamp">1 hour ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">UT</div>
+          <div class="content">
+            <h4>Urine Test Ordered</h4>
+            <p>Patient #OP-2049 - Routine Analysis</p>
+            <div class="timestamp">2 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">MT</div>
+          <div class="content">
+            <h4>Malaria Test Negative</h4>
+            <p>Patient #OP-2050 - No Parasites Detected</p>
+            <div class="timestamp">3 hours ago</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/rental.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-rental" data-roles="admin">
+  <header>
+    <h2>Rental Department</h2>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Equipment rental</p>
+        <h1>Track rented hospital assets, item condition, and return schedule</h1>
+        <p>Record item, renter, rental period, cost, and return status for billing and inventory.</p>
+      </div>
+      <img src="../images/rental.svg" alt="Rental Department" class="hero-image">
+    </section>
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Rental">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Item Rented<input name="description" placeholder="Wheelchair, oxygen tank" required></label>
+          <label>Cost<input name="cost" type="number" min="1" value="800" required></label>
+          <label>Rental Period<input name="period" placeholder="7 days"></label>
+          <label class="span-2">Condition / Return Notes<textarea name="notes"></textarea></label>
+          <button type="submit">Save Rental Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity"></aside>
+    </div>
+  </main>
+</body>
+</html>

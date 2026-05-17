@@ -1,0 +1,31 @@
+.dept-chronic {
+  --primary: #4f46e5;
+  --primary-dark: #312e81;
+  --dept-image: radial-gradient(circle at 82% 20%, rgba(255,255,255,.28), transparent 18%), linear-gradient(135deg, #312e81, #0f766e 58%, #111827);
+}
+
+.dept-chronic .dashboard-hero {
+  background: var(--dept-image);
+  position: relative;
+  overflow: hidden;
+}
+
+.dept-chronic .dashboard-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.dept-chronic .activity-panel h3 {
+  margin-top: 0;
+}
+
+.dept-chronic .care-note {
+  border: 1px solid #dbe4ff;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 1rem;
+  color: #334155;
+}

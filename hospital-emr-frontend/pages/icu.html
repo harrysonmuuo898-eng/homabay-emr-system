@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICU Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/icu.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-icu" data-roles="admin,doctor,nurse">
+  <header>
+    <h2>ICU Department</h2>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Intensive care</p>
+        <h1>Record critical care observations, ventilator status, and interventions</h1>
+        <p>Capture vital signs, sedation, ventilation, medication plans, and outcome notes.</p>
+      </div>
+      <img src="../images/icu.svg" alt="ICU Department" class="hero-image">
+    </section>
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="ICU">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Care Level<select name="description" required><option>Level 1</option><option>Level 2</option><option>Level 3</option></select></label>
+          <label>Cost<input name="cost" type="number" min="1" value="4500" required></label>
+          <label>Ventilation<input name="ventilation" placeholder="Mechanical, Non-invasive"></label>
+          <label>Sedation<input name="sedation" placeholder="Drug / dose"></label>
+          <label class="span-2">Clinical Notes<textarea name="notes"></textarea></label>
+          <button type="submit">Save ICU Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity"></aside>
+    </div>
+  </main>
+</body>
+</html>

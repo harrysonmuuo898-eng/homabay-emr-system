@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/doctor.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-doctor" data-roles="admin,doctor">
+  <header>
+    <h2>Doctor Dashboard</h2>
+  </header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Clinical consultation</p>
+        <h1>Record complete doctor activity</h1>
+        <p>Capture complaint, history, examination, diagnosis, treatment plan, prescription, referrals, follow-up, and charges.</p>
+      </div>
+      <img src="../images/doctor.svg" alt="Doctor Dashboard" class="hero-image">
+    </section>
+
+    <div class="quick-stats">
+      <div class="stat-card">
+        <div class="number">18</div>
+        <div class="label">Consultations Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">5</div>
+        <div class="label">Pending Reviews</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">92%</div>
+        <div class="label">Patient Satisfaction</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">KES 45K</div>
+        <div class="label">Revenue Today</div>
+      </div>
+    </div>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">Consultation Form</h3>
+        <form id="consultationForm" class="form-grid clinical-form" data-department-form="Doctor">
+      <label>Patient ID
+        <input name="patientID" required>
+      </label>
+      <label>Consultation Fee
+        <input name="cost" type="number" min="1" value="500" required>
+      </label>
+      <label class="span-2">Chief Complaint
+        <textarea name="chiefComplaint" required></textarea>
+      </label>
+      <label class="span-2">History
+        <textarea name="history"></textarea>
+      </label>
+      <label class="span-2">Examination Findings
+        <textarea name="examination"></textarea>
+      </label>
+      <label class="span-2">Diagnosis
+        <textarea name="description" required placeholder="Primary diagnosis from consultation"></textarea>
+      </label>
+      <label class="span-2">Treatment Plan
+        <textarea name="treatmentPlan"></textarea>
+      </label>
+      <label class="span-2">Prescription
+        <textarea name="prescription"></textarea>
+      </label>
+      <label>Referral
+        <input name="referral">
+      </label>
+      <label>Follow-up Date
+        <input name="followUp" type="date">
+      </label>
+      <button type="submit">Save Consultation</button>
+    </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Consultations</h3>
+        <div class="activity-item">
+          <div class="icon">DX</div>
+          <div class="content">
+            <h4>Diagnosis Recorded</h4>
+            <p>Patient #OP-2048 - Acute Respiratory Infection</p>
+            <div class="timestamp">1 hour ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">RX</div>
+          <div class="content">
+            <h4>Prescription Issued</h4>
+            <p>Patient #OP-2049 - Amoxicillin 500mg</p>
+            <div class="timestamp">3 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">REF</div>
+          <div class="content">
+            <h4>Referral Made</h4>
+            <p>Patient #OP-2050 - Referred to Cardiology</p>
+            <div class="timestamp">5 hours ago</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>

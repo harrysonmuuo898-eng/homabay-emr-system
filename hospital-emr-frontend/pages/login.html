@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Sign In</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/auth.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="auth-page">
+  <header>
+    <h2>Staff Sign In</h2>
+  </header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Protected EMR access</p>
+        <h1>Authorized staff only</h1>
+        <p>Use the username and password created by the administrator. Account creation is managed from the admin staff page.</p>
+      </div>
+      <img src="../images/staff.svg" alt="Staff sign in" class="hero-image">
+    </section>
+
+    <section class="form-panel login-panel">
+      <div class="panel-title">
+        <span>IN</span>
+        <strong>Sign in to continue</strong>
+      </div>
+      <form id="loginForm" class="form-grid">
+        <label>Username
+          <input name="username" autocomplete="username" required>
+        </label>
+        <label>Password
+          <input name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit">Sign In</button>
+      </form>
+    </section>
+
+    <div class="hint-panel">
+      <p id="statusHint">Only an administrator can create staff accounts. Contact admin if you do not have login credentials.</p>
+    </div>
+  </main>
+</body>
+</html>

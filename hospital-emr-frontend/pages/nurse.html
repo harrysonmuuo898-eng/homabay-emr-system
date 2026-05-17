@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Dashboard</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/nurse.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-nurse" data-roles="admin,nurse">
+  <header>
+    <h2>Nurse Dashboard</h2>
+  </header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Nursing care</p>
+        <h1>Vitals, care notes, and bedside services</h1>
+        <p>Record vital signs, nursing intervention, medication administered, and patient response.</p>
+      </div>
+      <img src="../images/nurse.svg" alt="Nursing Dashboard" class="hero-image">
+    </section>
+
+    <div class="quick-stats">
+      <div class="stat-card">
+        <div class="number">24</div>
+        <div class="label">Patients Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">8</div>
+        <div class="label">Pending Vitals</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">12</div>
+        <div class="label">Medications Given</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">95%</div>
+        <div class="label">Completion Rate</div>
+      </div>
+    </div>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">Record Patient Care</h3>
+        <form class="form-grid" data-department-form="Nurse">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Service Cost<input name="cost" type="number" min="1" value="1000" required></label>
+          <label>Temperature<input name="temperature" placeholder="36.7 C"></label>
+          <label>Blood Pressure<input name="bloodPressure" placeholder="120/80"></label>
+          <label>Pulse<input name="pulse"></label>
+          <label>Respiration<input name="respiration"></label>
+          <label class="span-2">Nursing Service / Intervention<textarea name="description" required></textarea></label>
+          <label class="span-2">Medication / Dressing / Injection Given<textarea name="medication"></textarea></label>
+          <label class="span-2">Patient Response<textarea name="response"></textarea></label>
+          <button type="submit">Save Nursing Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Activities</h3>
+        <div class="activity-item">
+          <div class="icon">VS</div>
+          <div class="content">
+            <h4>Vital Signs Recorded</h4>
+            <p>Patient #OP-2048 - BP: 120/80, Temp: 36.8°C</p>
+            <div class="timestamp">2 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">MED</div>
+          <div class="content">
+            <h4>Medication Administered</h4>
+            <p>Patient #OP-2049 - Paracetamol 500mg</p>
+            <div class="timestamp">4 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">DR</div>
+          <div class="content">
+            <h4>Dressing Changed</h4>
+            <p>Patient #OP-2050 - Wound dressing renewal</p>
+            <div class="timestamp">6 hours ago</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

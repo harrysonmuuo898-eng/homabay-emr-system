@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Maternity Department</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/maternity.css"><script src="../script.js" defer></script></head>
+<body class="dept-maternity" data-roles="admin,doctor,nurse"><header><h2>Maternity Department</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Maternal care</p><h1>Antenatal, delivery, and postnatal records</h1><p>Capture maternal service, gestation, observations, delivery notes, and charges.</p></div><img src="../images/maternity.svg" alt="Maternity Department" class="hero-image"></section>
+
+<div class="quick-stats">
+  <div class="stat-card">
+    <div class="number">8</div>
+    <div class="label">Deliveries Today</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">24</div>
+    <div class="label">Antenatal Visits</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">96%</div>
+    <div class="label">Safe Deliveries</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">KES 156K</div>
+    <div class="label">Maternity Revenue</div>
+  </div>
+</div>
+
+<div class="department-dashboard">
+  <section class="form-panel">
+    <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">Maternity Care Form</h3>
+    <form class="form-grid" data-department-form="Maternity">
+<label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" value="4000" required></label>
+<label>Service<select name="description"><option>Antenatal Care</option><option>Delivery</option><option>Postnatal Care</option><option>Emergency Obstetric Care</option></select></label><label>Gestation<input name="gestation" placeholder="32 weeks"></label>
+<label class="span-2">Observations<textarea name="observations"></textarea></label><label class="span-2">Care Notes<textarea name="notes"></textarea></label>
+<button type="submit">Save Maternity Activity</button></form>
+  </section>
+  <aside class="activity-panel" id="deptActivity">
+    <h3>Recent Maternity Care</h3>
+    <div class="activity-item">
+      <div class="icon">ANC</div>
+      <div class="content">
+        <h4>Antenatal Check-up</h4>
+        <p>Patient #OP-2048 - 28 weeks, normal</p>
+        <div class="timestamp">1 hour ago</div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="icon">DEL</div>
+      <div class="content">
+        <h4>Successful Delivery</h4>
+        <p>Patient #OP-2049 - Baby girl, 3.2kg</p>
+        <div class="timestamp">3 hours ago</div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="icon">PNC</div>
+      <div class="content">
+        <h4>Postnatal Care</h4>
+        <p>Patient #OP-2050 - Day 2 check-up</p>
+        <div class="timestamp">5 hours ago</div>
+      </div>
+    </div>
+  </aside>
+</div>
+</main></body></html>

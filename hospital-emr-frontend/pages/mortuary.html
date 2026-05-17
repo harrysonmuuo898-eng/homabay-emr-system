@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortuary Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/mortuary.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-mortuary" data-roles="admin,doctor">
+  <header>
+    <h2>Mortuary Department</h2>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Mortuary services</p>
+        <h1>Storage, viewing, cause-of-death review, and body release</h1>
+        <p>Manage public and private body storage, occupied spaces, family viewing, pathology or postmortem requests, documentation, and release clearance.</p>
+      </div>
+      <img src="../images/mortuary.svg" alt="Mortuary Department" class="hero-image">
+    </section>
+
+    <section class="mortuary-storage-board" aria-label="Mortuary storage availability">
+      <article class="storage-card public-storage">
+        <img src="../images/mortuary-public.svg" alt="Public storage spaces">
+        <div>
+          <p class="eyebrow">Public storage</p>
+          <h2>Shared body storage</h2>
+          <strong>8 spaces available</strong>
+          <span>12 occupied spaces</span>
+        </div>
+      </article>
+      <article class="storage-card private-storage">
+        <img src="../images/mortuary-private.svg" alt="Private storage spaces">
+        <div>
+          <p class="eyebrow">Private storage</p>
+          <h2>Reserved family storage</h2>
+          <strong>3 spaces available</strong>
+          <span>7 occupied spaces</span>
+        </div>
+      </article>
+      <article class="storage-card public-viewing-room">
+        <img src="../images/mortuary-viewing.svg" alt="Viewing room">
+        <div>
+          <p class="eyebrow">Public viewing</p>
+          <h2>Public viewing room</h2>
+          <strong>2 sessions open</strong>
+          <span>Shared viewing by appointment</span>
+        </div>
+      </article>
+      <article class="storage-card private-viewing-room">
+        <img src="../images/mortuary-private-viewing.svg" alt="Private viewing room">
+        <div>
+          <p class="eyebrow">Private viewing</p>
+          <h2>Private family room</h2>
+          <strong>1 session open</strong>
+          <span>Private viewing by appointment</span>
+        </div>
+      </article>
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid mortuary-form" data-department-form="Mortuary">
+          <label>Mortuary ID
+            <input name="mortuaryID" id="mortuaryID" placeholder="Generated automatically" readonly>
+          </label>
+          <label>Patient ID / Body Tag ID
+            <input name="patientID" required>
+          </label>
+          <label>Mortuary Service
+            <select name="description" required>
+              <option>Body Admission</option>
+              <option>Public Storage</option>
+              <option>Private Storage</option>
+              <option>Public Body Viewing</option>
+              <option>Private Body Viewing</option>
+              <option>Cause of Death Review</option>
+              <option>Postmortem / Autopsy Request</option>
+              <option>Embalming / Preservation</option>
+              <option>Body Preparation</option>
+              <option>Documentation and Permit</option>
+              <option>Release to Family</option>
+              <option>Hospital Transfer</option>
+              <option>Six-Month Body Disposal</option>
+            </select>
+          </label>
+          <label>Cost
+            <input name="cost" type="number" min="1" value="2500" required>
+          </label>
+          <label>Storage Type
+            <select name="storageType">
+              <option>Public Storage</option>
+              <option>Private Storage</option>
+              <option>Public Viewing Room</option>
+              <option>Private Viewing Room</option>
+              <option>Not Applicable</option>
+            </select>
+          </label>
+          <label>Storage Space / Shelf
+            <input name="storageSpace" placeholder="Public A-04, Private P-02">
+          </label>
+          <label>Space Status
+            <select name="spaceStatus">
+              <option>Occupied</option>
+              <option>Available</option>
+              <option>Reserved</option>
+              <option>Released</option>
+            </select>
+          </label>
+          <label>Deceased Name
+            <input name="deceasedName">
+          </label>
+          <label>Date / Time Received
+            <input name="receivedAt" type="datetime-local">
+          </label>
+          <label>Six-Month Review Date
+            <input name="sixMonthReviewDate" type="date">
+          </label>
+          <label>Disposal Eligibility
+            <select name="disposalEligibility">
+              <option>Not due</option>
+              <option>Due after six months</option>
+              <option>Approved for disposal</option>
+              <option>Disposed</option>
+            </select>
+          </label>
+          <label>Family Contact Person
+            <input name="familyContact">
+          </label>
+          <label>Family Phone
+            <input name="familyPhone" type="tel">
+          </label>
+          <label>Body Viewing Request
+            <select name="viewingRequest">
+              <option>No viewing requested</option>
+              <option>Public viewing room</option>
+              <option>Private viewing room</option>
+              <option>Viewing completed</option>
+            </select>
+          </label>
+          <label>Viewing Date / Time
+            <input name="viewingDateTime" type="datetime-local">
+          </label>
+          <label>Cause of Death Known?
+            <select name="causeKnown">
+              <option>Pending review</option>
+              <option>Known</option>
+              <option>Family requested determination</option>
+              <option>Referred for postmortem</option>
+            </select>
+          </label>
+          <label>Cause of Death
+            <input name="causeOfDeath" placeholder="If confirmed">
+          </label>
+          <label>Postmortem Requested By Family?
+            <select name="postmortemRequested">
+              <option>No</option>
+              <option>Yes</option>
+              <option>Awaiting consent</option>
+            </select>
+          </label>
+          <label>Pathologist / Doctor
+            <input name="pathologist">
+          </label>
+          <label>Release Status
+            <select name="releaseStatus">
+              <option>In storage</option>
+              <option>Awaiting documents</option>
+              <option>Cleared for release</option>
+              <option>Released to family</option>
+              <option>Transferred</option>
+            </select>
+          </label>
+          <label>Release Date / Time
+            <input name="releaseDateTime" type="datetime-local">
+          </label>
+          <label>Released To
+            <input name="releasedTo" placeholder="Name and ID number">
+          </label>
+          <label>Permit / Burial Document No.
+            <input name="permitNumber">
+          </label>
+          <label>Body Disposal Site
+            <input name="disposalSite" placeholder="Approved disposal site">
+          </label>
+          <label>Disposal Date / Time
+            <input name="disposalDateTime" type="datetime-local">
+          </label>
+          <label>Disposal Approved By
+            <input name="disposalApprovedBy">
+          </label>
+          <label>Disposal Witness
+            <input name="disposalWitness">
+          </label>
+          <label class="span-2">Body Condition / Identification Notes
+            <textarea name="bodyCondition"></textarea>
+          </label>
+          <label class="span-2">Postmortem / Cause-of-Death Findings
+            <textarea name="postmortemFindings"></textarea>
+          </label>
+          <label class="span-2">Additional Mortuary Notes
+            <textarea name="notes"></textarea>
+          </label>
+          <label class="span-2">Six-Month Disposal Notes
+            <textarea name="disposalNotes" placeholder="Record family notification, approvals, disposal site, and witness notes"></textarea>
+          </label>
+          <button type="submit">Save Mortuary Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Mortuary Workflow</h3>
+        <div class="mortuary-workflow-list">
+          <span>1. Admit and identify body</span>
+          <span>2. Assign public/private storage space</span>
+          <span>3. Record public/private viewing or postmortem request</span>
+          <span>4. Confirm cause-of-death documentation</span>
+          <span>5. Clear release documents and family handover</span>
+          <span>6. If body remains six months, process approved disposal to body disposal site</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

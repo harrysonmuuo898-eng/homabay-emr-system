@@ -1,0 +1,99 @@
+.dept-mortuary {
+  --primary: #4b5563;
+  --primary-dark: #111827;
+  --dept-image: radial-gradient(circle at 80% 18%, rgba(148,163,184,.5), transparent 20%), linear-gradient(135deg, #111827, #4b5563 48%, #0f172a);
+  --dept-icon: url("../images/mortuary.svg");
+}
+
+.dept-mortuary .dashboard-hero {
+  background: var(--dept-image);
+}
+
+.mortuary-storage-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.storage-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid #d9e5e7;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 14px 34px rgba(16, 36, 43, 0.08);
+}
+
+.storage-card img {
+  width: 120px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.storage-card h2,
+.storage-card p {
+  margin: 0;
+}
+
+.storage-card strong,
+.storage-card span {
+  display: block;
+}
+
+.storage-card strong {
+  color: #166534;
+  font-size: 1.1rem;
+}
+
+.storage-card span {
+  color: #64748b;
+}
+
+.public-storage {
+  border-left: 4px solid #475569;
+}
+
+.private-storage {
+  border-left: 4px solid #111827;
+}
+
+.public-viewing-room {
+  border-left: 4px solid #d97706;
+}
+
+.private-viewing-room {
+  border-left: 4px solid #7c3aed;
+}
+
+.mortuary-form label {
+  min-height: 98px;
+}
+
+.mortuary-workflow-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.mortuary-workflow-list span {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #334155;
+  padding: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1040px) {
+  .mortuary-storage-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .storage-card {
+    grid-template-columns: 1fr;
+  }
+}

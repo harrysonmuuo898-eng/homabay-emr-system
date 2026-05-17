@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronic Centre</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/chronic.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-chronic" data-roles="admin,doctor,nurse,technician">
+  <header><h2>Chronic Centre</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">HIV/AIDS and TB follow-up</p>
+        <h1>Track treatment, medicine refills, adherence, and clinical review</h1>
+        <p>Record ART and TB care visits, medicine pickup, missed doses, viral load/CD4, sputum or GeneXpert results, side effects, counselling, and next appointment.</p>
+      </div>
+      <img src="../images/chronic.svg" alt="Chronic Centre" class="hero-image">
+    </section>
+
+    <div class="quick-stats">
+      <div class="stat-card"><div class="number">ART</div><div class="label">HIV Care</div></div>
+      <div class="stat-card"><div class="number">TB</div><div class="label">TB Treatment</div></div>
+      <div class="stat-card"><div class="number">REFILL</div><div class="label">Medicine Tracking</div></div>
+      <div class="stat-card"><div class="number">VL/CD4</div><div class="label">Lab Follow-up</div></div>
+    </div>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Chronic Centre">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Visit Cost<input name="cost" type="number" min="1" value="500" required></label>
+          <label>Program
+            <select name="description" required>
+              <option>HIV/AIDS Care Visit</option>
+              <option>TB Care Visit</option>
+              <option>HIV/TB Co-infection Review</option>
+              <option>Medicine Refill</option>
+              <option>Counselling Session</option>
+            </select>
+          </label>
+          <label>Treatment Regimen<input name="regimen" placeholder="ART/TB regimen"></label>
+          <label>Medicine Given<input name="medicineGiven" placeholder="Drug name and quantity"></label>
+          <label>Days Supplied<input name="daysSupplied" type="number" min="0"></label>
+          <label>Missed Doses<input name="missedDoses" type="number" min="0" value="0"></label>
+          <label>Adherence Status
+            <select name="adherenceStatus">
+              <option>Good</option>
+              <option>Missed doses</option>
+              <option>Interrupted treatment</option>
+              <option>Needs counselling</option>
+            </select>
+          </label>
+          <label>Viral Load / CD4<input name="viralLoadCd4" placeholder="e.g. VL suppressed, CD4 520"></label>
+          <label>TB Result<input name="tbResult" placeholder="Sputum/GeneXpert result"></label>
+          <label class="span-2">Side Effects / Symptoms<textarea name="sideEffects"></textarea></label>
+          <label class="span-2">Counselling and Clinical Notes<textarea name="notes"></textarea></label>
+          <label>Next Refill Date<input name="nextRefillDate" type="date"></label>
+          <label>Next Clinic Date<input name="nextClinicDate" type="date"></label>
+          <button type="submit">Save Chronic Centre Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Care Tracking</h3>
+        <div class="care-note">
+          Use this page for HIV/AIDS care, TB treatment, co-infection follow-up, medicine refill history, missed dose tracking, and counselling notes.
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

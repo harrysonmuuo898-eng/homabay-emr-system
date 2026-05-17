@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>X-Ray Department</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/xray.css"><script src="../script.js" defer></script></head>
+<body class="dept-xray" data-roles="admin,doctor,nurse,technician"><header><h2>X-Ray Department</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Radiology</p><h1>X-Ray imaging requests and findings</h1><p>Record imaging type, body region, clinical indication, findings, and charges.</p></div><img src="../images/xray.svg" alt="X-Ray Department" class="hero-image"></section>
+
+<div class="quick-stats">
+  <div class="stat-card">
+    <div class="number">12</div>
+    <div class="label">X-Rays Today</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">3</div>
+    <div class="label">Pending Reports</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">97%</div>
+    <div class="label">Report Accuracy</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">KES 18K</div>
+    <div class="label">Imaging Revenue</div>
+  </div>
+</div>
+
+<div class="department-dashboard">
+  <section class="form-panel">
+    <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">X-Ray Imaging Form</h3>
+    <form class="form-grid" data-department-form="X-Ray">
+<label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" value="1500" required></label>
+<label>Body Region<input name="procedure" placeholder="Chest, arm, pelvis" required></label><label>View<input name="view" placeholder="AP, lateral"></label>
+<label class="span-2">Clinical Indication<textarea name="indication"></textarea></label><label class="span-2">Findings<textarea name="description" required></textarea></label>
+<button type="submit">Save X-Ray Activity</button></form>
+  </section>
+  <aside class="activity-panel" id="deptActivity">
+    <h3>Recent Imaging</h3>
+    <div class="activity-item">
+      <div class="icon">XR</div>
+      <div class="content">
+        <h4>Chest X-Ray Completed</h4>
+        <p>Patient #OP-2048 - Normal findings</p>
+        <div class="timestamp">30 min ago</div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="icon">ARM</div>
+      <div class="content">
+        <h4>Arm Fracture Detected</h4>
+        <p>Patient #OP-2049 - Radius fracture</p>
+        <div class="timestamp">1 hour ago</div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="icon">PEL</div>
+      <div class="content">
+        <h4>Pelvis X-Ray Ordered</h4>
+        <p>Patient #OP-2050 - Trauma assessment</p>
+        <div class="timestamp">2 hours ago</div>
+      </div>
+    </div>
+  </aside>
+</div>
+</main></body></html>

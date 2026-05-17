@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/registration.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-registration" data-roles="admin,nurse">
+  <header>
+    <h2>Patient Registration</h2>
+  </header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Front office intake</p>
+        <h1>Complete patient identity and triage capture</h1>
+        <p>The system assigns the patient number automatically, then the front office captures identity, contact, insurance, next of kin, allergies, and medical history.</p>
+      </div>
+      <img src="../images/registration.svg" alt="Patient registration" class="hero-image">
+    </section>
+
+    <div class="quick-stats">
+      <div class="stat-card">
+        <div class="number">18</div>
+        <div class="label">Registrations Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">5</div>
+        <div class="label">Pending Triage</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">94%</div>
+        <div class="label">Completion Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">KES 12K</div>
+        <div class="label">Registration Fees</div>
+      </div>
+    </div>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <div class="registration-form-head">
+          <div>
+            <p class="eyebrow">New patient</p>
+            <h3>Patient Registration Form</h3>
+          </div>
+          <div class="patient-id-card">
+            <span>Auto Patient ID</span>
+            <strong id="patientIdPreview">Generating...</strong>
+          </div>
+        </div>
+        <form id="registrationForm" class="form-grid">
+          <label class="patient-id-field">Patient ID
+            <input name="patientID" id="patientID" placeholder="Generated automatically" readonly>
+          </label>
+          <label>First Name
+            <input name="firstName" required>
+          </label>
+          <label>Middle Name
+            <input name="middleName" required>
+          </label>
+          <label>Last Name
+            <input name="lastName" required>
+          </label>
+          <label>Date of Birth
+            <input name="dob" type="date">
+          </label>
+          <label>Age in Years
+            <input name="ageYears" type="number" min="0" max="130">
+          </label>
+          <label>Gender
+            <select name="gender">
+              <option value="">Select gender</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Patient Type
+            <select name="patientType" required>
+              <option value="Outpatient">Outpatient</option>
+              <option value="Inpatient">Inpatient</option>
+            </select>
+          </label>
+          <label>Phone Contact
+            <input name="contact" type="tel">
+          </label>
+          <label>National ID
+            <input name="nationalID">
+          </label>
+          <label>Insurance / SHA ID
+            <input name="insuranceID">
+          </label>
+          <label>Address
+            <input name="address">
+          </label>
+          <label>Next of Kin
+            <input name="nextOfKin">
+          </label>
+          <label>Next of Kin Contact
+            <input name="nextOfKinContact" type="tel">
+          </label>
+          <label class="span-2">Known Allergies
+            <textarea name="allergies" placeholder="Separate multiple allergies with commas"></textarea>
+          </label>
+          <label class="span-2">Medical History
+            <textarea name="medicalHistory" placeholder="Separate conditions with commas"></textarea>
+          </label>
+          <button type="submit">Register Patient</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Registration Checklist</h3>
+        <div class="activity-item">
+          <div class="icon">ID</div>
+          <div class="content">
+            <h4>Patient ID Generated</h4>
+            <p>OP-HYY numbers update automatically every year.</p>
+            <div class="timestamp">System controlled</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">KIN</div>
+          <div class="content">
+            <h4>Contact Details</h4>
+            <p>Capture phone, address, next of kin, and insurance details.</p>
+            <div class="timestamp">Required for follow-up</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="icon">MED</div>
+          <div class="content">
+            <h4>Clinical Alerts</h4>
+            <p>Record allergies and medical history before service starts.</p>
+            <div class="timestamp">Improves safety</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

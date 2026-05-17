@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/admin.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-admin" data-roles="admin">
+  <header><h2>Admin Dashboard</h2></header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Operations control</p>
+        <h1>Whole hospital department oversight</h1>
+        <p>Review every department, assigned doctors and nurses, patient activity, billing totals, staff counts, and service details from one admin workspace.</p>
+      </div>
+      <img src="../images/admin.svg" alt="Admin analytics" class="hero-image">
+    </section>
+
+    <section class="admin-toolbar" aria-label="Admin actions">
+      <button type="button" onclick="loadAdminOverview()">Refresh Admin Overview</button>
+      <a class="btn btn-secondary" href="staff.html">Manage Staff</a>
+      <a class="btn btn-secondary" href="departments.html">Open Departments</a>
+    </section>
+
+    <section class="quick-stats admin-summary" id="adminSummary" aria-label="Hospital totals"></section>
+
+    <section class="department-dashboard admin-dashboard">
+      <div class="form-panel">
+        <div class="panel-title">
+          <span>ALL</span>
+          <strong>Department Detail</strong>
+        </div>
+        <div id="adminDepartments" class="admin-departments"></div>
+      </div>
+
+      <aside class="activity-panel">
+        <h3>Combined Data</h3>
+        <div id="stats"></div>
+        <canvas id="chart" width="600" height="300"></canvas>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

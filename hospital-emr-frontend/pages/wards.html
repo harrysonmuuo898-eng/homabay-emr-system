@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Wards Department</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/wards.css"><script src="../script.js" defer></script></head>
+<body class="dept-wards" data-roles="admin,doctor,nurse"><header><h2>Wards Department</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Inpatient care</p><h1>Ward admission and daily care</h1><p>Record ward, bed, days admitted, care notes, discharge status, and charges.</p></div><img src="../images/wards.svg" alt="Wards Department" class="hero-image"></section>
+<div class="department-dashboard">
+  <section class="form-panel">
+    <form class="form-grid" data-department-form="Wards">
+<label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" value="1000" required></label>
+<label>Ward / Bed<input name="wardBed" required></label><label>Days Admitted<input name="days" type="number" min="1"></label>
+<label class="span-2">Ward Service Summary<textarea name="description" required></textarea></label><label class="span-2">Discharge / Progress Notes<textarea name="notes"></textarea></label>
+<button type="submit">Save Ward Activity</button></form>
+  </section>
+  <aside class="activity-panel" id="deptActivity"></aside>
+</div>
+</main></body></html>

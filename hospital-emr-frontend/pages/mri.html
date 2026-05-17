@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MRI Department</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/mri.css"><script src="../script.js" defer></script></head>
+<body class="dept-mri" data-roles="admin,doctor,nurse,technician"><header><h2>MRI Department</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Advanced imaging</p><h1>MRI scans and reporting</h1><p>Capture scan type, contrast use, indication, radiology report, and charges.</p></div><img src="../images/mri.svg" alt="MRI Department" class="hero-image"></section>
+<div class="department-dashboard">
+  <section class="form-panel">
+    <form class="form-grid" data-department-form="MRI">
+<label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" value="5000" required></label>
+<label>Scan Type<input name="procedure" placeholder="Brain MRI" required></label><label>Contrast<select name="contrast"><option>No contrast</option><option>With contrast</option></select></label>
+<label class="span-2">Indication<textarea name="indication"></textarea></label><label class="span-2">Report / Findings<textarea name="description" required></textarea></label>
+<button type="submit">Save MRI Activity</button></form>
+  </section>
+  <aside class="activity-panel" id="deptActivity"></aside>
+</div>
+</main></body></html>

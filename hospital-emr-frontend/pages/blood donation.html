@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/blood-donation.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-blood-donation" data-roles="admin,nurse,technician">
+  <header>
+    <h2>Blood Donation</h2>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Donation services</p>
+        <h1>Collect donor, blood type, and screening details</h1>
+        <p>Record donor eligibility, donation type, screening results, and inventory updates.</p>
+      </div>
+      <img src="../images/blood-donation.svg" alt="Blood Donation Department" class="hero-image">
+    </section>
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Blood Donation">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Donation Type<select name="description" required><option>Whole Blood</option><option>Platelets</option><option>Plasma</option><option>Double Red Cells</option></select></label>
+          <label>Cost<input name="cost" type="number" min="1" value="1200" required></label>
+          <label>Blood Type<input name="bloodType" placeholder="A+, O-, B+" required></label>
+          <label>Donation Volume<input name="volume" placeholder="450 ml"></label>
+          <label class="span-2">Screening Notes<textarea name="notes"></textarea></label>
+          <button type="submit">Save Donation Record</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity"></aside>
+    </div>
+  </main>
+</body>
+</html>

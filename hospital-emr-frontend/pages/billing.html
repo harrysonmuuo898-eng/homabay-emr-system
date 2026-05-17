@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Billing</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/billing.css"><script src="../script.js" defer></script></head>
+<body class="dept-billing" data-roles="admin,nurse"><header><h2>Billing</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Revenue desk</p><h1>Review services and complete payment</h1><p>Billing is restricted to authorized administrative and nursing staff.</p></div></section>
+
+<div class="quick-stats">
+  <div class="stat-card">
+    <div class="number">KES 45K</div>
+    <div class="label">Today's Revenue</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">23</div>
+    <div class="label">Pending Bills</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">156</div>
+    <div class="label">Services Billed</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">92%</div>
+    <div class="label">Collection Rate</div>
+  </div>
+</div>
+
+<input id="pid" placeholder="Patient ID">
+<div class="action-row"><button onclick="generateBill(document.getElementById('pid').value,'SHA')">Pay with SHA</button><button onclick="generateBill(document.getElementById('pid').value,'M-Pesa')">Pay with M-Pesa</button></div>
+<div id="bill"></div></main></body></html>

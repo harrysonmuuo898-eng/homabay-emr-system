@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theatre Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/theatre.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-theatre" data-roles="admin,doctor,nurse">
+  <header>
+    <h2>Theatre Department</h2>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Surgical services</p>
+        <h1>Procedure, anesthesia, and operative notes</h1>
+        <p>Record surgery type, team, anesthesia, operative notes, outcome, and charges.</p>
+      </div>
+    </section>
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Theatre">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Cost<input name="cost" type="number" min="1" value="8000" required></label>
+          <label>Surgery Type<input name="description" required></label>
+          <label>Anesthesia<input name="anesthesia"></label>
+          <label class="span-2">Operative Notes<textarea name="operativeNotes"></textarea></label>
+          <label class="span-2">Outcome / Recovery Notes<textarea name="outcome"></textarea></label>
+          <button type="submit">Save Theatre Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity"></aside>
+    </div>
+  </main>
+</body>
+</html>

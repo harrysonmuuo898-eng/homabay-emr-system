@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCH Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/mch.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-mch" data-roles="admin,doctor,nurse">
+  <header>
+    <h2>MCH Department</h2>
+  </header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Maternal & child health</p>
+        <h1>Track maternal checks, immunizations, and child wellness visits</h1>
+        <p>Record antenatal and postnatal care, vaccinations, nutrition counseling, and family planning.</p>
+      </div>
+      <img src="../images/mch.svg" alt="MCH Department" class="hero-image">
+    </section>
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="MCH">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Visit Type<select name="description" required><option>Antenatal</option><option>Postnatal</option><option>Child Immunization</option><option>Nutrition Counseling</option></select></label>
+          <label>Cost<input name="cost" type="number" min="1" value="1800" required></label>
+          <label>Gestational Age<input name="gestation" placeholder="28 weeks"></label>
+          <label class="span-2">Health Notes<textarea name="notes"></textarea></label>
+          <button type="submit">Save MCH Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity"></aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Staff Management</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/admin.css"><script src="../script.js" defer></script></head><body class="dept-admin" data-roles="admin"><header><h2>Staff Management</h2></header><main>
+<section class="dashboard-hero"><div><p class="eyebrow">Team operations</p><h1>Create and manage authorized staff</h1><p>Add doctors, nurses, technicians, and other staff members with appropriate roles and departments.</p></div></section>
+
+<form id="createStaffForm" class="form-grid">
+  <label>Staff ID
+    <input name="staffID" autocomplete="off" required>
+  </label>
+  <label>Username
+    <input name="username" autocomplete="username" required>
+  </label>
+  <label>Name
+    <input name="name" autocomplete="name" required>
+  </label>
+  <label>Password
+    <input name="password" type="password" autocomplete="new-password" required>
+  </label>
+  <label>Role
+    <select name="role" required>
+      <option value="">Select role</option>
+      <option value="doctor">Doctor</option>
+      <option value="nurse">Nurse</option>
+      <option value="technician">Technician</option>
+      <option value="staff">Staff</option>
+    </select>
+  </label>
+  <label>Department
+    <select name="department" required>
+      <option value="General">General</option>
+      <option value="Registration">Registration</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Nurse">Nurse</option>
+      <option value="Laboratory">Laboratory</option>
+      <option value="X-Ray">X-Ray</option>
+      <option value="MRI">MRI</option>
+      <option value="Eye Clinic">Eye Clinic</option>
+      <option value="ICU">ICU</option>
+      <option value="Maternity">Maternity</option>
+      <option value="MCH">MCH</option>
+      <option value="Theatre">Theatre</option>
+      <option value="Wards">Wards</option>
+      <option value="Pharmacy">Pharmacy</option>
+      <option value="Chronic Centre">Chronic Centre</option>
+      <option value="ICT">ICT</option>
+      <option value="Blood Donation">Blood Donation</option>
+      <option value="Mortuary">Mortuary</option>
+      <option value="Billing">Billing</option>
+      <option value="Rental">Rental</option>
+      <option value="Administration">Administration</option>
+    </select>
+  </label>
+  <button type="submit">Create Staff Account</button>
+</form>
+
+<section id="staffList"></section>
+</main></body></html>
