@@ -694,6 +694,20 @@ footer {
   gap: 0.75rem;
 }
 
+.table-link {
+  color: var(--primary-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.btn-small {
+  min-height: 32px;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+}
+
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1036,7 +1050,9 @@ body.department-page #bill h3 {
 
 .department-work-scene,
 .department-identity-panel,
-.ict-support-panel {
+.ict-support-panel,
+.department-profile-lookup,
+.blood-request-check {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1085,7 +1101,8 @@ body.department-page #bill h3 {
   gap: 0.5rem;
 }
 
-.department-capability-list span {
+.department-capability-list span,
+.department-capability-list .capability-chip {
   border: 1px solid rgba(8, 127, 140, 0.18);
   border-radius: 999px;
   background: #f8fafc;
@@ -1095,10 +1112,30 @@ body.department-page #bill h3 {
   font-weight: 800;
 }
 
+.department-capability-list .capability-chip {
+  min-height: 0;
+  box-shadow: none;
+}
+
+.department-capability-list .capability-chip:hover {
+  background: #e0f2f1;
+  color: var(--primary-dark);
+}
+
+.field-highlight {
+  outline: 3px solid rgba(217, 119, 6, 0.36);
+  outline-offset: 3px;
+  transition: outline-color 180ms ease;
+}
+
 .department-work-scene h2,
 .department-work-scene p,
 .department-identity-panel h2,
 .department-identity-panel p,
+.department-profile-lookup h2,
+.department-profile-lookup p,
+.blood-request-check h2,
+.blood-request-check p,
 .ict-support-panel h2,
 .ict-support-panel p {
   margin: 0;
@@ -1115,6 +1152,35 @@ body.department-page #bill h3 {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+}
+
+.inline-lookup {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.blood-bank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1rem;
+}
+
+.department-records-overview {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid rgba(217, 229, 231, 0.95);
+  border-radius: 8px;
+  background: #fff;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  box-shadow: 0 14px 34px rgba(16, 36, 43, 0.08);
+}
+
+.department-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
 }
 
 .department-work-scene img {
@@ -1198,9 +1264,17 @@ body.department-page canvas {
 
   .department-work-scene,
   .department-identity-panel,
+  .department-profile-lookup,
+  .blood-request-check,
   .ict-support-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .inline-lookup,
+  .blood-bank-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 
   .department-capability-list {

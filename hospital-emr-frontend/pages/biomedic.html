@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biomedic</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-biomedic" data-roles="admin,technician">
+  <header><h2>Biomedic</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Biomedical engineering</p>
+        <h1>Record medical equipment faults, service work, and maintenance status</h1>
+        <p>Track equipment service requests, biomedical assets, department affected, fault details, action taken, and engineer notes.</p>
+      </div>
+      <img src="../images/ict.svg" alt="Biomedic" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Biomedic">
+          <label>Patient ID / Job Reference
+            <input name="patientID" placeholder="Use patient ID or leave blank for auto job reference">
+          </label>
+          <label>Service Cost<input name="cost" type="number" min="1" value="1" required></label>
+          <label>Service
+            <select name="description" required>
+              <option>Biomedical Equipment Service</option>
+              <option>Equipment Fault Report</option>
+              <option>Preventive Maintenance</option>
+              <option>Calibration Check</option>
+              <option>Equipment Decommission</option>
+            </select>
+          </label>
+          <label>Asset Number<input name="assetNumber" required></label>
+          <label>Department Affected<input name="departmentAffected" placeholder="ICU, Theatre, Wards"></label>
+          <label>Maintenance Status
+            <select name="maintenanceStatus">
+              <option>Open</option>
+              <option>In progress</option>
+              <option>Resolved</option>
+              <option>Decommissioned</option>
+            </select>
+          </label>
+          <label>Biomedical Engineer<input name="biomedicalEngineer"></label>
+          <label class="span-2">Fault Details<textarea name="faultDetails" required></textarea></label>
+          <label class="span-2">Action Taken<textarea name="actionTaken"></textarea></label>
+          <button type="submit">Save Biomedic Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Biomedic Activity</h3>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

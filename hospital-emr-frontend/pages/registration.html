@@ -23,6 +23,8 @@
       <img src="../images/registration.svg" alt="Patient registration" class="hero-image">
     </section>
 
+    <section class="printable-id-slip" id="patientIdSlip" aria-live="polite"></section>
+
     <div class="quick-stats">
       <div class="stat-card">
         <div class="number">18</div>
@@ -93,8 +95,16 @@
           <label>National ID
             <input name="nationalID">
           </label>
+          <label>Coverage Type
+            <select name="coverageType">
+              <option>No Insurance / Self Pay</option>
+              <option>SHA</option>
+              <option>Private Insurance</option>
+              <option>Company Cover</option>
+            </select>
+          </label>
           <label>Insurance / SHA ID
-            <input name="insuranceID">
+            <input name="insuranceID" placeholder="Optional if no insurance">
           </label>
           <label>Address
             <input name="address">

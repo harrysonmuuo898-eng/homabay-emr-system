@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Counseling</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-stress-counseling" data-roles="admin,doctor,nurse">
+  <header><h2>Stress Counseling</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Counseling support</p>
+        <h1>Record stress assessment, counseling session, and coping plan</h1>
+        <p>Capture stress level, triggers, counseling notes, agreed coping strategies, referral needs, and review dates.</p>
+      </div>
+      <img src="../images/profile.svg" alt="Stress Counseling" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Stress Counseling">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Session Cost<input name="cost" type="number" min="1" value="500" required></label>
+          <label>Service
+            <select name="description" required>
+              <option>Stress Counseling Session</option>
+              <option>Stress Assessment</option>
+              <option>Coping Skills Session</option>
+              <option>Follow-up Counseling</option>
+              <option>Referral Counseling</option>
+            </select>
+          </label>
+          <label>Stress Level
+            <select name="stressLevel">
+              <option>Mild</option>
+              <option>Moderate</option>
+              <option>Severe</option>
+            </select>
+          </label>
+          <label>Status
+            <select name="status">
+              <option>Completed</option>
+              <option>Follow-up needed</option>
+              <option>Referred</option>
+            </select>
+          </label>
+          <label>Counselor<input name="counselor"></label>
+          <label class="span-2">Stress Triggers<textarea name="stressTriggers"></textarea></label>
+          <label class="span-2">Counseling Notes<textarea name="counselingNotes" required></textarea></label>
+          <label class="span-2">Coping Plan<textarea name="copingPlan"></textarea></label>
+          <label>Review Date<input name="reviewDate" type="date"></label>
+          <button type="submit">Save Stress Counseling Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Counseling Activity</h3>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

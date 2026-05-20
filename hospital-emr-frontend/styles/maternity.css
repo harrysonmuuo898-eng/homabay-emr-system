@@ -177,3 +177,19 @@
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
+
+.maternity-overview {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid rgba(217, 229, 231, 0.95);
+  border-radius: 8px;
+  background: #fff;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  box-shadow: 0 14px 34px rgba(16, 36, 43, 0.08);
+}
+
+.maternity-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem;
+}

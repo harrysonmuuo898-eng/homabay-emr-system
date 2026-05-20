@@ -35,6 +35,25 @@
       </section>
       <aside class="activity-panel" id="deptActivity"></aside>
     </div>
+    <section class="department-dashboard">
+      <section class="form-panel">
+        <div class="panel-title">
+          <span>BB</span>
+          <strong>Request Blood From Blood Donation</strong>
+        </div>
+        <form class="form-grid" id="bloodRequestForm">
+          <input type="hidden" name="requestedByDepartment" value="ICU">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Blood Type<select name="bloodType" required><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+          <label>Amount Needed (ml)<input name="amountRequested" type="number" min="1" value="450" required></label>
+          <label>Urgency<select name="urgency"><option>Urgent</option><option>Emergency</option><option>Routine</option></select></label>
+          <label class="span-2">Reason<textarea name="reason" placeholder="Transfusion need, procedure, or clinical reason"></textarea></label>
+          <button type="submit">Send Blood Request</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="bloodInventory"></aside>
+    </section>
+    <section class="activity-panel" id="bloodRequests"></section>
   </main>
 </body>
 </html>

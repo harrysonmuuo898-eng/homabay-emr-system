@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope Center</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-hope-center" data-roles="admin,doctor,nurse,technician">
+  <header><h2>Hope Center</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Hope Center program</p>
+        <h1>Track counseling, adherence support, and community follow-up</h1>
+        <p>Record Hope Center visits, support programs, counseling notes, adherence concerns, and next appointments.</p>
+      </div>
+      <img src="../images/chronic.svg" alt="Hope Center" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Hope Center">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Visit Cost<input name="cost" type="number" min="1" value="500" required></label>
+          <label>Service
+            <select name="description" required>
+              <option>Hope Center Visit</option>
+              <option>Counseling Session</option>
+              <option>Adherence Support</option>
+              <option>Community Follow-up</option>
+              <option>Health Education</option>
+            </select>
+          </label>
+          <label>Program
+            <select name="program">
+              <option>Counseling</option>
+              <option>Adherence support</option>
+              <option>Community follow-up</option>
+              <option>Health education</option>
+            </select>
+          </label>
+          <label>Status
+            <select name="status">
+              <option>Completed</option>
+              <option>Needs follow-up</option>
+              <option>Referred</option>
+            </select>
+          </label>
+          <label>Next Appointment<input name="nextAppointment" type="date"></label>
+          <label class="span-2">Support Notes<textarea name="supportNotes" required></textarea></label>
+          <label class="span-2">Follow-up Plan<textarea name="followUpPlan"></textarea></label>
+          <button type="submit">Save Hope Center Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Hope Center Activity</h3>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

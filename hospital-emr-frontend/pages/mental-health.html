@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-mental-health" data-roles="admin,doctor,nurse">
+  <header><h2>Mental Health</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Mental health care</p>
+        <h1>Record mental health assessment, risk level, and care plan</h1>
+        <p>Capture assessment notes, risk status, diagnosis, interventions, referrals, and follow-up plans.</p>
+      </div>
+      <img src="../images/clinical-team.svg" alt="Mental Health" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Mental Health">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Service Cost<input name="cost" type="number" min="1" value="800" required></label>
+          <label>Service
+            <select name="description" required>
+              <option>Mental Health Assessment</option>
+              <option>Psychiatric Review</option>
+              <option>Medication Review</option>
+              <option>Crisis Intervention</option>
+              <option>Referral Session</option>
+            </select>
+          </label>
+          <label>Risk Level
+            <select name="riskLevel">
+              <option>Low</option>
+              <option>Moderate</option>
+              <option>High</option>
+              <option>Emergency</option>
+            </select>
+          </label>
+          <label>Status
+            <select name="status">
+              <option>Stable</option>
+              <option>Needs review</option>
+              <option>Referred</option>
+            </select>
+          </label>
+          <label>Clinician<input name="clinician"></label>
+          <label class="span-2">Assessment Notes<textarea name="assessmentNotes" required></textarea></label>
+          <label class="span-2">Care Plan<textarea name="carePlan"></textarea></label>
+          <label>Follow-up Date<input name="followUpDate" type="date"></label>
+          <button type="submit">Save Mental Health Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Mental Health Activity</h3>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

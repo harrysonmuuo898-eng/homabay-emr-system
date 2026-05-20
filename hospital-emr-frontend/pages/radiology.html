@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiology Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/radiology.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-radiology" data-roles="admin,doctor,nurse,technician">
+  <header><h2>Radiology Department</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Full scanning</p>
+        <h1>Full body and bone scanning records</h1>
+        <p>Capture whole-body scans, bone trauma studies, spine imaging, scan findings, contrast status, and radiology reporting.</p>
+      </div>
+      <img src="../images/xray.svg" alt="Radiology Department" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Radiology">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Scan Type<select name="description" required><option>Full Body Scan</option><option>Bone Scan</option><option>Trauma Series</option><option>Spine Scan</option><option>Chest Scan</option><option>Abdominal Scan</option></select></label>
+          <label>Cost<input name="cost" type="number" min="1" value="3500" required></label>
+          <label>Body Region<input name="bodyRegion" placeholder="Full body, skull, ribs, spine, pelvis"></label>
+          <label>Contrast<select name="contrast"><option>No contrast</option><option>With contrast</option></select></label>
+          <label>Report Status<select name="reportStatus"><option>Pending</option><option>Reported</option><option>Reviewed</option></select></label>
+          <label class="span-2">Clinical Indication<textarea name="indication"></textarea></label>
+          <label class="span-2">Radiology Findings<textarea name="findings"></textarea></label>
+          <button type="submit">Save Radiology Activity</button>
+        </form>
+      </section>
+      <aside class="activity-panel" id="deptActivity"></aside>
+    </div>
+  </main>
+</body>
+</html>

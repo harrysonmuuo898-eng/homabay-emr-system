@@ -6,6 +6,7 @@ const medicines = [];
 const staff = [];
 const departmentRecords = [];
 const departmentRecordTables = {};
+const bloodRequests = [];
 
 function findPatient(patientID) {
   return patients.find(patient => patient.patientID.toLowerCase() === String(patientID).toLowerCase());
@@ -34,6 +35,7 @@ module.exports = {
   staff,
   departmentRecords,
   departmentRecordTables,
+  bloodRequests,
   findPatient,
   findPendingBill,
   getPatientServices,

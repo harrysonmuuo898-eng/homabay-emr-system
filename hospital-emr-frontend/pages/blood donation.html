@@ -24,17 +24,38 @@
     <div class="department-dashboard">
       <section class="form-panel">
         <form class="form-grid" data-department-form="Blood Donation">
-          <label>Patient ID<input name="patientID" required></label>
+          <label>Donor Name<input name="donorName" placeholder="Donor full name" required></label>
           <label>Donation Type<select name="description" required><option>Whole Blood</option><option>Platelets</option><option>Plasma</option><option>Double Red Cells</option></select></label>
           <label>Cost<input name="cost" type="number" min="1" value="1200" required></label>
-          <label>Blood Type<input name="bloodType" placeholder="A+, O-, B+" required></label>
-          <label>Donation Volume<input name="volume" placeholder="450 ml"></label>
+          <label>Blood Type<select name="bloodType" required><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+          <label>Amount Collected (ml)<input name="amountCollected" type="number" min="1" value="450" required></label>
+          <label>Screening Status<select name="screeningStatus" required><option>Pending</option><option>Passed</option><option>Deferred</option></select></label>
+          <label>Unit Number<input name="unitNumber" placeholder="Unit or bag number" required></label>
           <label class="span-2">Screening Notes<textarea name="notes"></textarea></label>
           <button type="submit">Save Donation Record</button>
         </form>
       </section>
       <aside class="activity-panel" id="deptActivity"></aside>
     </div>
+    <section class="blood-request-check">
+      <div>
+        <p class="eyebrow">ICU request monitor</p>
+        <h2>Check if ICU has requested blood</h2>
+      </div>
+      <button type="button" onclick="activateCapabilityTarget('#bloodRequests')">Check ICU Blood Requests</button>
+    </section>
+    <section class="blood-request-check">
+      <div>
+        <p class="eyebrow">Collection records</p>
+        <h2>View all blood collected by type and amount</h2>
+      </div>
+      <button type="button" onclick="activateCapabilityTarget('#bloodCollected')">View Blood Collected</button>
+    </section>
+    <section class="blood-bank-grid">
+      <div class="activity-panel" id="bloodInventory"></div>
+      <div class="activity-panel" id="bloodCollected"></div>
+      <div class="activity-panel" id="bloodRequests"></div>
+    </section>
   </main>
 </body>
 </html>

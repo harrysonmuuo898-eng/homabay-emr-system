@@ -1,14 +1,29 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Wards Department</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../styles/wards.css"><script src="../script.js" defer></script></head>
 <body class="dept-wards" data-roles="admin,doctor,nurse"><header><h2>Wards Department</h2></header><main>
 <section class="dashboard-hero"><div><p class="eyebrow">Inpatient care</p><h1>Ward admission and daily care</h1><p>Record ward, bed, days admitted, care notes, discharge status, and charges.</p></div><img src="../images/wards.svg" alt="Wards Department" class="hero-image"></section>
+<section class="ward-capacity-board" aria-label="Ward capacity">
+  <article><strong>Ward 1</strong><span>General Medical</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 2</strong><span>General Surgical</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 3</strong><span>Female Ward</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 4</strong><span>Male Ward</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 5</strong><span>Paediatric Ward</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 6</strong><span>Maternity Ward</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 7</strong><span>Isolation Ward</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 8</strong><span>Orthopaedic Ward</span><b>30 patient spaces</b></article>
+  <article><strong>Ward 9</strong><span>Private / Special Ward</span><b>30 patient spaces</b></article>
+  <article class="mortuary-ward"><strong>Ward 10</strong><span>Mortuary</span><b>30 body spaces</b></article>
+</section>
 <div class="department-dashboard">
   <section class="form-panel">
     <form class="form-grid" data-department-form="Wards">
 <label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" value="1000" required></label>
-<label>Ward / Bed<input name="wardBed" required></label><label>Days Admitted<input name="days" type="number" min="1"></label>
+<label>Ward<select name="ward" required><option>Ward 1 - General Medical</option><option>Ward 2 - General Surgical</option><option>Ward 3 - Female Ward</option><option>Ward 4 - Male Ward</option><option>Ward 5 - Paediatric Ward</option><option>Ward 6 - Maternity Ward</option><option>Ward 7 - Isolation Ward</option><option>Ward 8 - Orthopaedic Ward</option><option>Ward 9 - Private / Special Ward</option><option>Ward 10 - Mortuary</option></select></label><label>Bed / Space Number<input name="wardBed" placeholder="1 - 30" required></label>
+<label>Patient Group<select name="patientGroup" required><option>Child</option><option>Mother</option><option>Male</option><option>Aged Person</option><option>Other</option></select></label><label>Days Admitted<input name="days" type="number" min="1"></label>
+<label>Patient Space Capacity<input name="capacity" value="30" readonly></label>
 <label class="span-2">Ward Service Summary<textarea name="description" required></textarea></label><label class="span-2">Discharge / Progress Notes<textarea name="notes"></textarea></label>
 <button type="submit">Save Ward Activity</button></form>
   </section>
   <aside class="activity-panel" id="deptActivity"></aside>
 </div>
+<section class="ward-population-summary" id="wardPopulationSummary"></section>
 </main></body></html>

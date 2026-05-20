@@ -432,7 +432,7 @@ router.post("/pay", requireRole("admin", "nurse"), async (req, res, next) => {
   }
 });
 
-router.get("/patient/:patientID", requireRole("admin", "doctor", "nurse"), async (req, res, next) => {
+router.get("/patient/:patientID", requireRole("admin", "doctor", "nurse", "technician"), async (req, res, next) => {
   try {
     if (isMongoReady()) {
       const bills = await Billing.find({ patientID: req.params.patientID }).lean();

@@ -13,6 +13,7 @@ const patientSchema = new mongoose.Schema({
   address: String,
   nextOfKin: String,
   nextOfKinContact: String,
+  coverageType: { type: String, default: "No Insurance / Self Pay" },
   insuranceID: String,
   nationalID: String,
   patientType: { type: String, enum: ["Inpatient", "Outpatient"], required: true },

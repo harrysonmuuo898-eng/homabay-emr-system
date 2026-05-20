@@ -1,0 +1,5 @@
+.dept-radiology {
+  --primary: #2563eb;
+  --primary-dark: #1e3a8a;
+  --dept-image: radial-gradient(circle at 80% 18%, rgba(147,197,253,.48), transparent 20%), linear-gradient(135deg, #1e3a8a, #2563eb 48%, #0f172a);
+}

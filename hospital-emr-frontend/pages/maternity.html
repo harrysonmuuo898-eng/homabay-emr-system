@@ -26,7 +26,14 @@
     <h3 style="margin-top: 0; color: #1f2937; font-size: 1.25rem; font-weight: 700;">Maternity Care Form</h3>
     <form class="form-grid" data-department-form="Maternity">
 <label>Patient ID<input name="patientID" required></label><label>Cost<input name="cost" type="number" min="1" value="4000" required></label>
-<label>Service<select name="description"><option>Antenatal Care</option><option>Delivery</option><option>Postnatal Care</option><option>Emergency Obstetric Care</option></select></label><label>Gestation<input name="gestation" placeholder="32 weeks"></label>
+<label>Service<select name="description"><option>Antenatal Care</option><option>Delivery</option><option>Active Labour / Delivering</option><option>Postnatal Care</option><option>Emergency Obstetric Care</option><option>C-Section / Birth Surgery</option><option>Normal Delivery</option><option>Newborn ICU / Extra Care Referral</option><option>Family Planning</option><option>Ultrasound Review</option><option>Immunization Handoff</option><option>Breastfeeding Support</option><option>Other Maternity Service</option></select></label><label>Gestation<input name="gestation" placeholder="32 weeks"></label>
+<label>Mother Status<select name="motherStatus"><option>Stable</option><option>In labour / delivering</option><option>Delivered</option><option>Post surgery recovery</option><option>Needs observation</option><option>Referred</option></select></label>
+<label>Delivery Status<select name="deliveryStatus"><option>Not delivered yet</option><option>Delivering</option><option>Delivered</option><option>Postnatal follow-up</option></select></label>
+<label>Baby Outcome<select name="babyOutcome"><option>Not delivered yet</option><option>Born safely</option><option>Born dead</option><option>Born but needs ICU / extra care</option><option>Multiple birth - needs review</option></select></label>
+<label>Birth Method<select name="birthMethod"><option>Not applicable</option><option>Normal delivery</option><option>Surgery / C-section</option><option>Assisted delivery</option><option>Emergency procedure</option></select></label>
+<label>Baby Sex<select name="babySex"><option>Not recorded</option><option>Female</option><option>Male</option><option>Twins / Multiple</option></select></label>
+<label>Baby Weight<input name="babyWeight" placeholder="3.2 kg"></label>
+<label>Extra Care Needed<select name="extraCareNeeded"><option>No</option><option>ICU</option><option>HDU</option><option>Newborn unit</option><option>Observation</option></select></label>
 <label class="span-2">Observations<textarea name="observations"></textarea></label><label class="span-2">Care Notes<textarea name="notes"></textarea></label>
 <button type="submit">Save Maternity Activity</button></form>
   </section>
@@ -58,4 +65,5 @@
     </div>
   </aside>
 </div>
+<section class="maternity-overview" id="maternityOverview"></section>
 </main></body></html>

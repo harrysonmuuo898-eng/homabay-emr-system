@@ -17,8 +17,17 @@ const departments = [
   "Pharmacy",
   "Eye Clinic",
   "Laboratory",
+  "Radiology",
   "Chronic Centre",
-  "ICT"
+  "ICT",
+  "HDU",
+  "Outpatient Department",
+  "Dental Department",
+  "Hope Center",
+  "Mental Health",
+  "Stress Counseling",
+  "Therapy Records",
+  "Biomedic"
 ];
 
 function normalizeDepartment(input, fallback = null) {

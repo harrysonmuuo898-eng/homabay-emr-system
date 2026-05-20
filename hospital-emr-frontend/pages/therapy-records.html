@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapy Records</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-therapy-records" data-roles="admin,doctor,nurse">
+  <header><h2>Therapy Records</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Therapy progress</p>
+        <h1>Record therapy sessions, goals, interventions, and progress</h1>
+        <p>Capture therapy type, goals, session notes, intervention, progress, and next session planning.</p>
+      </div>
+      <img src="../images/profile.svg" alt="Therapy Records" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Therapy Records">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Session Cost<input name="cost" type="number" min="1" value="700" required></label>
+          <label>Service
+            <select name="description" required>
+              <option>Therapy Session</option>
+              <option>Initial Therapy Assessment</option>
+              <option>Progress Review</option>
+              <option>Family Therapy Session</option>
+              <option>Group Therapy Session</option>
+            </select>
+          </label>
+          <label>Therapy Type
+            <select name="therapyType">
+              <option>Individual</option>
+              <option>Group</option>
+              <option>Family</option>
+              <option>Rehabilitation</option>
+            </select>
+          </label>
+          <label>Progress
+            <select name="progress">
+              <option>Improving</option>
+              <option>Stable</option>
+              <option>Needs support</option>
+            </select>
+          </label>
+          <label>Therapist<input name="therapist"></label>
+          <label class="span-2">Therapy Goals<textarea name="therapyGoals"></textarea></label>
+          <label class="span-2">Session Notes<textarea name="sessionNotes" required></textarea></label>
+          <label class="span-2">Intervention / Homework<textarea name="interventionPlan"></textarea></label>
+          <label>Next Session<input name="nextSession" type="date"></label>
+          <button type="submit">Save Therapy Record</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Therapy Records</h3>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

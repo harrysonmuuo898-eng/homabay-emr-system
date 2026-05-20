@@ -106,6 +106,66 @@
   letter-spacing: 0;
 }
 
+.printable-id-slip {
+  display: none;
+}
+
+.printable-id-slip.is-visible {
+  display: block;
+}
+
+.id-slip-card {
+  display: grid;
+  gap: 1rem;
+  border: 2px solid #115e59;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1.25rem;
+  box-shadow: 0 16px 34px rgba(15, 118, 110, 0.14);
+}
+
+.id-slip-card h2,
+.id-slip-card p {
+  margin: 0;
+}
+
+.id-slip-main {
+  border: 1px dashed rgba(15, 118, 110, 0.45);
+  border-radius: 8px;
+  background: #ecfdf5;
+  padding: 1rem;
+}
+
+.id-slip-main span,
+.id-slip-main strong {
+  display: block;
+}
+
+.id-slip-main span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.id-slip-main strong {
+  color: #115e59;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1;
+}
+
+.id-slip-details {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.id-slip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .dept-registration .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -258,5 +318,33 @@
 
   .patient-id-card {
     text-align: left;
+  }
+}
+
+@media print {
+  body.printing-id-slip header,
+  body.printing-id-slip main > :not(.printable-id-slip) {
+    display: none !important;
+  }
+
+  body.printing-id-slip main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+
+  body.printing-id-slip .printable-id-slip {
+    display: block !important;
+  }
+
+  body.printing-id-slip .id-slip-card {
+    box-shadow: none;
+  }
+
+  body.printing-id-slip .id-slip-actions {
+    display: none;
   }
 }

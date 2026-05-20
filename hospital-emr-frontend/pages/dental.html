@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Department</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="dept-dental" data-roles="admin,doctor,nurse,technician">
+  <header><h2>Dental Department</h2></header>
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Oral health services</p>
+        <h1>Record dental examinations, procedures, and oral care plans</h1>
+        <p>Track dental complaints, tooth area, procedures, medication, dentist notes, and follow-up visits.</p>
+      </div>
+      <img src="../images/clinical-team.svg" alt="Dental Department" class="hero-image">
+    </section>
+
+    <div class="department-dashboard">
+      <section class="form-panel">
+        <form class="form-grid" data-department-form="Dental Department">
+          <label>Patient ID<input name="patientID" required></label>
+          <label>Service Cost<input name="cost" type="number" min="1" value="1000" required></label>
+          <label>Service
+            <select name="description" required>
+              <option>Dental Consultation</option>
+              <option>Tooth Extraction</option>
+              <option>Dental Filling</option>
+              <option>Scaling and Polishing</option>
+              <option>Dental X-Ray Review</option>
+            </select>
+          </label>
+          <label>Tooth Number / Area<input name="toothArea" placeholder="e.g. Upper left molar"></label>
+          <label>Procedure Status
+            <select name="procedureStatus">
+              <option>Planned</option>
+              <option>Completed</option>
+              <option>Referred</option>
+            </select>
+          </label>
+          <label>Dentist<input name="dentist"></label>
+          <label class="span-2">Dental Findings<textarea name="dentalFindings" required></textarea></label>
+          <label class="span-2">Treatment / Medication<textarea name="treatmentPlan"></textarea></label>
+          <label>Follow-up Date<input name="followUpDate" type="date"></label>
+          <button type="submit">Save Dental Activity</button>
+        </form>
+      </section>
+
+      <aside class="activity-panel" id="deptActivity">
+        <h3>Recent Dental Activity</h3>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -169,6 +169,18 @@
   gap: 0.8rem;
 }
 
+.admin-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.dept-admin .admin-card-actions .btn {
+  min-height: 36px;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.82rem;
+}
+
 .admin-roster > div {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,5 @@
+.dept-hdu {
+  --primary: #0f766e;
+  --primary-dark: #134e4a;
+  --dept-image: radial-gradient(circle at 80% 18%, rgba(45,212,191,.42), transparent 20%), linear-gradient(135deg, #134e4a, #0f766e 48%, #111827);
+}

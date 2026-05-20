@@ -25,7 +25,8 @@ function normalizePatient(body) {
     address: body.address || "",
     nextOfKin: body.nextOfKin || "",
     nextOfKinContact: body.nextOfKinContact || "",
-    insuranceID: body.insuranceID || "",
+    coverageType: String(body.coverageType || "No Insurance / Self Pay").trim(),
+    insuranceID: String(body.insuranceID || "").trim(),
     nationalID: body.nationalID || "",
     allergies: Array.isArray(body.allergies) ? body.allergies : String(body.allergies || "").split(",").map(item => item.trim()).filter(Boolean),
     medicalHistory: Array.isArray(body.medicalHistory) ? body.medicalHistory : []
@@ -67,6 +68,7 @@ function publicPatient(patient) {
     address: patient.address,
     nextOfKin: patient.nextOfKin,
     nextOfKinContact: patient.nextOfKinContact,
+    coverageType: patient.coverageType || "No Insurance / Self Pay",
     insuranceID: patient.insuranceID,
     nationalID: patient.nationalID,
     allergies: patient.allergies || [],
@@ -78,7 +80,7 @@ function publicPatient(patient) {
 
 router.use(requireAuth);
 
-router.get("/", requireRole("admin", "doctor", "nurse"), async (req, res, next) => {
+router.get("/", requireRole("admin", "doctor", "nurse", "technician"), async (req, res, next) => {
   try {
     const patients = await Patient.find().sort({ createdAt: -1 }).lean();
     res.json(patients.map(publicPatient));
@@ -127,7 +129,7 @@ router.post(["/", "/register"], requireRole("admin", "nurse"), async (req, res, 
   }
 });
 
-router.get("/:patientID", requireRole("admin", "doctor", "nurse"), async (req, res, next) => {
+router.get("/:patientID", requireRole("admin", "doctor", "nurse", "technician"), async (req, res, next) => {
   try {
     const patient = await Patient.findOne({ patientID: req.params.patientID }).lean();
     if (!patient) return res.status(404).json({ error: "Patient not found" });
@@ -137,7 +139,7 @@ router.get("/:patientID", requireRole("admin", "doctor", "nurse"), async (req, r
   }
 });
 
-router.get("/:patientID/profile", requireRole("admin", "doctor", "nurse"), async (req, res, next) => {
+router.get("/:patientID/profile", requireRole("admin", "doctor", "nurse", "technician"), async (req, res, next) => {
   try {
     const patient = await Patient.findOne({ patientID: req.params.patientID }).lean();
     if (!patient) return res.status(404).json({ error: "Patient not found" });
